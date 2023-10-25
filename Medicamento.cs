@@ -62,6 +62,6 @@ namespace TP_2._0
             return "Id: " + id + " | Código: " + codigo + " | Designación: " + designacion;
         }
 
-        public abstract void Destruir();
+        public abstract void Destruir();        
     }
 }

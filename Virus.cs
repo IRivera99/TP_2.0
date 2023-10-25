@@ -10,7 +10,7 @@ namespace TP_2._0
     {
         public Virus(Vacuna vacuna)
         {
-            id = randy.Next(0, 1500);
+            id = vacuna.GetId();
             codigo = vacuna.GetCodigo() + GenerarCodigoAleatorio(1);
             designacion = vacuna.GetDesignacion();
         }

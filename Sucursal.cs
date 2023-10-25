@@ -8,7 +8,7 @@ namespace TP_2._0
 {
     class Sucursal
     {
-        public string codigo;
+        string codigo;
         List<Medicamento> medicamentos;
 
         readonly Random randy = new Random();
@@ -31,6 +31,11 @@ namespace TP_2._0
             }
             
             medicamentos = new List<Medicamento>();
+        }
+
+        public string GetCodigo()
+        {
+            return codigo;
         }
 
         string GenerarCodigoAleatorio(int cantCaracteres)
@@ -109,6 +114,11 @@ namespace TP_2._0
             {
                 medicamento.Destruir();
             }
+        }
+
+        public bool BuscarIdVacuna(int id)
+        {     
+            return medicamentos.Exists(m => m.GetId() == id && m is Vacuna);
         }
     }
 }
