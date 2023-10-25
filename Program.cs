@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Creado por Ignacio Rivera
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,13 +29,24 @@ namespace TP_2._0
                 AsignarSucursal(Console.ReadLine());
             }           
 
-            Console.WriteLine(sucursal.codigo);
-            Console.ReadLine();
-
             while (!opcion.Equals("SALIR"))
             {
                 switch (opcion)
                 {
+                    case "1":
+                        break;
+                    case "2":
+                        break;
+                    case "3":
+                        break;
+                    case "4":
+                        break;
+                    case "5":
+                        break;
+                    case "6":
+                        break;
+                    case "7":
+                        break;
                     default:
                         Console.WriteLine("Opción no válida");
                         break;
