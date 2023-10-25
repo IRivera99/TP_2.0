@@ -53,10 +53,18 @@ namespace TP_2._0
 
         public void ListarMedicamentos()
         {
-            for (int i = 0; i < medicamentos.Count; i++)
+            if (medicamentos.Count > 0) 
             {
-                Console.WriteLine($"Indice: {i} | {medicamentos[i].ToString()}");
+                for (int i = 0; i < medicamentos.Count; i++)
+                {
+                    Console.WriteLine($"Indice: {i} | {medicamentos[i].ToString()}");
+                }
             }
+            else
+            {
+                Console.WriteLine("No hay medicamentos listados...");
+            }
+            
         }
 
         public void CatalogarNuevaVacuna(Vacuna vacuna)

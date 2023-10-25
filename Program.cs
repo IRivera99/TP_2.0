@@ -44,6 +44,7 @@ namespace TP_2._0
                             SintetizarVirus();
                             break;
                         case "3":
+                            DestruirMedicamento();
                             break;
                         case "4":
                             break;
@@ -169,6 +170,13 @@ namespace TP_2._0
                     Console.WriteLine("\nNo se pudo sintetizar un virus, verifique primero de crear una vacuna...");
                 else
                     Console.WriteLine($"\nVirus sintetizado con éxito\n{virus.ToString()}");
+                Console.ReadLine();
+            }
+
+            void DestruirMedicamento()
+            {
+                Console.Clear();
+                sucursal.ListarMedicamentos();
                 Console.ReadLine();
             }
         }
