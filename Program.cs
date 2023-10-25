@@ -41,6 +41,7 @@ namespace TP_2._0
                             CatalogarNuevaVacuna();
                             break;
                         case "2":
+                            SintetizarVirus();
                             break;
                         case "3":
                             break;
@@ -58,9 +59,7 @@ namespace TP_2._0
                             break;
                     }
                 }
-            }                   
-
-            
+            }              
 
             void MostrarMenu()
             {
@@ -149,9 +148,9 @@ namespace TP_2._0
                   
                 
                 Vacuna vacuna = new Vacuna(id, codigo, (Designaciones)designacion);
-                Console.WriteLine(vacuna.ToString());
-                Console.ReadLine();
                 sucursal.CatalogarNuevaVacuna(vacuna);
+                Console.WriteLine($"\nVacuna catalogada con éxito\n{vacuna.ToString()}");
+                Console.ReadLine();
             }
 
             void ListarDesignaciones()
@@ -163,6 +162,15 @@ namespace TP_2._0
                 }
             }
 
+            void SintetizarVirus()
+            {
+                Virus virus = sucursal.SintetizarVirus();
+                if (virus == null)
+                    Console.WriteLine("\nNo se pudo sintetizar un virus, verifique primero de crear una vacuna...");
+                else
+                    Console.WriteLine($"\nVirus sintetizado con éxito\n{virus.ToString()}");
+                Console.ReadLine();
+            }
         }
     }
 }

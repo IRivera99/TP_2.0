@@ -64,18 +64,18 @@ namespace TP_2._0
             medicamentos.Add(vacuna);
         }
 
-        public bool SintetizarVirus()
+        public Virus SintetizarVirus()
         {
-            bool sintetizada = false;
+            Virus virus = null;
             Vacuna vacuna = (Vacuna)medicamentos.FindLast(m => m is Vacuna);
 
             if(vacuna != null)
             {
-                medicamentos.Add(new Virus(vacuna));
-                sintetizada = true;
+                virus = new Virus(vacuna);
+                medicamentos.Add(virus);                
             }
 
-            return sintetizada;
+            return virus;
         }
 
         public bool DestruirMedicamento(Medicamento medicamento)
@@ -120,5 +120,7 @@ namespace TP_2._0
         {     
             return medicamentos.Exists(m => m.GetId() == id && m is Vacuna);
         }
+
+
     }
 }
